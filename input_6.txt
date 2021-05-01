@@ -1,0 +1,41 @@
+c "Running new spells test"
+c "Tests the knock item attack and lesser heal spell"
+c "The rogue will loot items and then lose one"
+
+
+
+s e 1
+s e 2
+
+s p w 4
+s p p 6
+s p m 9
+s p r 10
+
+p a
+
+a 1 4 weapon_attack
+a 1 4 weapon_attack
+a 2 4 weapon_attack
+a 6 4 lesser_heal
+a 4 2 strike
+a 10 2 blindside
+a 9 1 fireball
+
+p a
+
+a 1 10 knock_item
+a 1 4 weapon_attack
+a 4 1 strike
+a 6 10 lesser_heal
+a 10 1 blindside
+a 9 1 fireball
+
+p a
+
+
+
+
+
+c "**********************************"
+c "**********************************"

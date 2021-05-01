@@ -19,6 +19,10 @@ void Priest::GreaterHeal(Entity *target)
     Heal(target, GetWisdom() * 2.0, "Greater Heal");
 }
 
+void Priest::LesserHeal(Entity *target)
+{
+    Heal(target, GetWisdom(), "Lesser Heal");
+}
 
 void Priest::OutputStatus() const
 {
@@ -50,6 +54,11 @@ void Priest::UseAction(Entity * target, const std::string& spellName, const std:
     if(spellName == "greater_heal")
     {
         GreaterHeal(target);
+        return;
+    }
+    if(spellName == "lesser_heal")
+    {
+        LesserHeal(target);
         return;
     }
     errorFindingAbility(spellName);

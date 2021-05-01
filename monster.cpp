@@ -13,6 +13,12 @@ void Monster::WeaponAttack(Entity *target)
     Attack(target, this->weapon_damage, "WeaponAttack");
 }
 
+void Monster::KnockItem(Entity *target)
+{
+    Attack(target, this->weapon_damage / 2, "KnockItem");
+    target->LoseAnItem(0);
+}
+
 void Monster::OutputStatus() const
 {
     std::cout << this->Race() << ": " << this->Name()
@@ -28,6 +34,12 @@ void Monster::UseAction(Entity * target, const std::string& spellName, const std
         WeaponAttack(target);
         return;
     }
+    if(spellName == "knock_item")
+    {
+        KnockItem(target);
+        return;
+    }
+
     
     errorFindingAbility(spellName);
 }
