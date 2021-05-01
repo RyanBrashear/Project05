@@ -1,2 +1,2 @@
 # Project05
-I am planning to use your second idea and change all containers to std::vector aswell as your fourth idea and probably add in something like a Bard.
+I added a lesser heal spell to the priest class aswell as adding a new ability to monsters similar to the rogues pickpocket that removes the first item in a targets inventory but does not add it to the monsters.
